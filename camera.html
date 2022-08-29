@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <video autoplay></video>
+  <canvas class="d-none"></canvas>
+
+  <script>
+    const video = document.querySelector('video');
+
+    async function getVideoDevices() {
+      const devices = await navigator.mediaDevices.enumerateDevices();
+      return devices.filter(device => device.kind === 'videoinput');
+    }
+    const startStream = async () => {
+      const videoDevices = await getVideoDevices();
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: true,
+        deviceId: {
+          exact: videoDevices[0].deviceId
+        }
+      });
+      handleStream(stream);
+    };
+    const handleStream = (stream) => {
+      video.srcObject = stream;
+    };
+
+    if ('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices) {
+      startStream();
+    }
+  </script>
+</body>
+</html>
