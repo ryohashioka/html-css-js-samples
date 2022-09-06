@@ -55,6 +55,12 @@ body {
 }
 
 
+/********** button clicks **********/
+#click_rotate.rotate {
+  animation: rotate-anim .5s ease-out forwards;
+}
+
+
 /********** scrolls **********/
 .scroll-box {
   width: 200px;
