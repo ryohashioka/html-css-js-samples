@@ -1,0 +1,79 @@
+/*======== 前略 ========*/
+
+/* プロダクト */
+#product {
+  background-color: #fafafa;
+  width: 100%;
+  margin: 80px 0 80px 0;
+  padding: 10px 40px 0px 40px;
+}
+
+/* 外枠 */
+#product > div {
+  margin-top: 40px;
+  display: flex;
+}
+
+/* 左のカラム */
+#product-left {
+  width: 50%;
+  margin-right: 20px;
+}
+
+/* 右のカラム */
+#product-right {
+  width: 50%;
+  margin-left: 20px;
+  margin-top: 80px;
+}
+
+/* 画像＋説明の枠 */
+#product-left > div {
+  position: relative;
+  height: 480px;
+  margin-right: 20px;
+}
+#product-right > div {
+  position: relative;
+  height: 480px;
+  margin-left: 20px;
+}
+
+/* 画像*/
+.product-photo {
+  width: 100%;
+}
+
+/* 説明文の枠 */
+.product-explain {
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 280px;
+  margin: 0 40px 0 40px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 説明文の英語 */
+.product-explain > span {
+  color: #2710d5;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* 説明文の見出し */
+.product-explain > h3 {
+  margin: 5px 0 5px 0;
+}
+
+/* 説明文 */
+.product-explain > p {
+  margin: 0;
+}
+
+/* 「もっとみる」ボタン */
+#product-more {
+  margin: 0 auto -42px auto;
+}
